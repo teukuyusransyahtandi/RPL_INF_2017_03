@@ -1,0 +1,49 @@
+<!DOOTYPE html>
+<html>
+<head>
+	<title>Tugas 2 PBW</title>
+	
+	<script type="text/javascript">
+	
+	
+		function upperCase() {
+			var x=document.getElementById("jurusan").value;
+			document.getElementById("jurusan").value= "" + x.toUpperCase();
+		}
+		
+		function validate(form){
+			var at = document.getElementById("email").value.indexOf("@")
+			submitOK = "true"
+			
+			if (at == -1) {
+				alert("Not a valid e-mail!")
+				submitOK = "false"
+				form.reset();
+			}
+			if (submitOK == "false") {
+				return false
+			}
+		}
+		
+	</script>
+
+	</head>
+<body>
+
+<fieldset>
+<legend>FORM</legend>
+	<form action="" onsubmit="return validate(this.form)">
+		<input type="text" name="npm" placeholder="NPM" required><br><br>
+		<input type="text" name="nama" placeholder="Nama" required><br><br>
+		<input type="text" name="jurusan" id="jurusan" placeholder="jurusan" required onsubmit="upperCase()"><br><br>
+		<input type="text" name="email" id="placeholder="Email" required><br><br>
+		<input type="submit" name="button" value="Simpan">
+	</form>
+</fieldset>
+
+</body>
+</html>
+
+
+
+	
